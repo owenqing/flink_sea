@@ -214,4 +214,4 @@ public class JsonPrintSinkFunction extends RichSinkFunction<RowData> implements 
 ```
 
 ### 3. 实现源码
-[json-print sql connector 实现]()
+[json-print sql connector 实现](https://github.com/owenqing/flink_sea/tree/main/src/main/java/org/owenqing/sea/connector/jsonprint)
