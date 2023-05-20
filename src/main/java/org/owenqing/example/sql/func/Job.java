@@ -15,7 +15,7 @@ public class Job {
         StreamTableEnvironment tEnv = StreamTableEnvironment.create(env);
         // config
         Configuration config = tEnv.getConfig().getConfiguration();
-        config.setString("pipeline.name", "flink sql");
+        config.setString("pipeline.name", "udf demo");
         config.set(CoreOptions.DEFAULT_PARALLELISM, 1);
 
         // register user define function
@@ -36,8 +36,8 @@ public class Job {
                 "               'fields.val.max' = '100'" +
                 ")");
 
-        tEnv.executeSql("SELECT " +
-                "               upFunc(name)," +
+        tEnv.executeSql("SELECT" +
+                "               upFunc(name) AS uName," +
                 "               word," +
                 "               len" +
                 "           FROM event" +
