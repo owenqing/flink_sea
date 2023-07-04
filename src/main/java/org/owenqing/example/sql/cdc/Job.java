@@ -8,6 +8,7 @@ public class Job {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
         StreamTableEnvironment tEnv = StreamTableEnvironment.create(env);
 
+        tEnv.executeSql("");
         env.execute();
     }
 }
